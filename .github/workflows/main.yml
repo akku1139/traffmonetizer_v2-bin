@@ -21,7 +21,7 @@ jobs:
 
       - name: Git
         run: |
-          cp /app/honeygain /usr/lib/libhg.so* /usr/lib/libmsquic.so.2* .
+          cp /app/* .
           git config --global --add safe.directory $PWD
           if [ -n "$(git status --porcelain)" ]; then
             git config --global user.name "github-actions[bot]"
